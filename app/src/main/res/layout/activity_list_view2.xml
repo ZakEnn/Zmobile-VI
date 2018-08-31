@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context=".activities.listViewActivity2">
+
+    <ListView
+        android:id="@+id/targetListView"
+        android:layout_width="match_parent"
+        android:layout_height="383dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="46dp"
+        android:background="#f8fefb"
+        android:foregroundGravity="top|fill_vertical" />
+
+    <ImageButton
+        android:id="@+id/deleteButton"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_alignBottom="@+id/plusButton"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="19dp"
+        app:srcCompat="@drawable/deletelol" />
+
+    <ImageButton
+        android:id="@+id/plusButton"
+        android:layout_width="55dp"
+        android:layout_height="54dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="19dp"
+        android:onClick="addVirtualMachine"
+        app:srcCompat="@drawable/plusultra" />
+
+    <TextView
+        android:id="@+id/titleComponentTextView"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="#494"
+        android:foregroundGravity="right|fill_horizontal"
+        android:gravity="center"
+        android:textColor="#FF9"
+        android:textSize="22sp" />
+
+    <EditText
+        android:id="@+id/dsValEditText"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/webInfo"
+        android:layout_alignStart="@+id/webInfo"
+        android:ems="10"
+        android:hint="datastore name "
+        android:inputType="textPersonName"
+        android:onClick="createDatastore" />
+
+    <Button
+        android:id="@+id/okButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignTop="@+id/dsValEditText"
+        android:layout_toEndOf="@+id/dsValEditText"
+        android:onClick="create datastore"
+        android:text="Ok" />
+
+    <Button
+        android:id="@+id/webInfo"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/deleteButton"
+        android:layout_centerHorizontal="true"
+        android:text="Communities vmware" />
+
+</RelativeLayout>

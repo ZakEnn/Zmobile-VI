@@ -1,0 +1,553 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context=".activities.showInfos">
+
+    <ScrollView
+        android:id="@+id/horizontalScrollView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:fillViewport="true"
+        android:scrollbars="vertical">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:stretchColumns="*"
+            android:shrinkColumns="*"
+            >
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#fef3F9"
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/resourceTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_span="4"
+                    android:text="Resources"
+                   />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="fill_horizontal|center">
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    app:srcCompat="@drawable/cpu2"
+                    android:layout_weight="2"
+                    />
+
+                <TextView
+                    android:id="@+id/cpuTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="CPU"
+                    android:textSize="15sp" />
+
+                <ProgressBar
+                    android:id="@+id/cpuProgressBar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="0dp"
+                    android:layout_height="20dp"
+                    android:layout_weight="3"
+                    android:paddingRight="20dp" />
+
+                <TextView
+                    android:id="@+id/cpuPercentTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="fill_horizontal|center">
+
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="0dp"
+                    android:layout_height="20dp"
+                    app:srcCompat="@drawable/memory2"
+                    android:layout_weight="2"
+                    />
+
+                <TextView
+                    android:id="@+id/memoryTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Memory"
+                    android:textSize="15sp"
+                    android:layout_weight="2"
+                    />
+
+                <ProgressBar
+                    android:id="@+id/memoryProgressBar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="0dp"
+                    android:layout_height="20dp"
+                    android:layout_weight="3"
+                    android:paddingRight="20dp" />
+
+                <TextView
+                    android:id="@+id/memoryPercentTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="fill_horizontal|center">
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    app:srcCompat="@drawable/storage"
+                    android:layout_weight="2"
+                    />
+
+                <TextView
+                    android:id="@+id/storageTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Storage"
+                    android:textSize="15sp"
+                    android:layout_weight="2"
+                    />
+
+                <ProgressBar
+                    android:id="@+id/storageProgressBar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="0dp"
+                    android:layout_height="20dp"
+                    android:layout_weight="3"
+                    android:paddingRight="20dp" />
+
+                <TextView
+                    android:id="@+id/storagePercentTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#fef3F9"
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/detailTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Details"
+                     />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_span="2">
+
+                <TextView
+                    android:id="@+id/guestNameTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4"
+                    android:background="#f9fef8"
+                    android:padding="10dp"
+                    android:text="Guest Name " />
+
+                <TextView
+                    android:id="@+id/guestNameValueTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6"
+                    android:padding="10dp"
+                    android:text="TextView" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/guestOSTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4"
+                    android:background="#f9fef8"
+                    android:padding="10dp"
+                    android:text="Guest OS " />
+
+                <TextView
+                    android:id="@+id/guestOsValueTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6"
+                    android:padding="10dp"
+                    android:text="TextView" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_span="2">
+
+                <TextView
+                    android:id="@+id/guestStateTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4"
+                    android:background="#f9fef8"
+                    android:padding="10dp"
+                    android:text="Guest State " />
+
+                <TextView
+                    android:id="@+id/guestStateValueTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6"
+                    android:padding="10dp"
+                    android:text="TextView" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_span="2">
+
+                <TextView
+                    android:id="@+id/guestVersionTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4"
+                    android:background="#f9fef8"
+                    android:padding="10dp"
+                    android:text="Version" />
+
+                <TextView
+                    android:id="@+id/guestVersionValueTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6"
+                    android:padding="10dp"
+                    android:text="TextView" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#fef3F9"
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/hardDiskTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hard Disk"
+                     />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_span="2">
+
+                <TextView
+                    android:id="@+id/backingTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4"
+                    android:background="#f9fef8"
+                    android:padding="10dp"
+                    android:text="Backing" />
+
+                <TextView
+                    android:id="@+id/backingValueTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6"
+                    android:padding="10dp"
+                    android:text="TextView" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_span="2">
+
+                <TextView
+                    android:id="@+id/capacityTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4"
+                    android:background="#f9fef8"
+                    android:padding="10dp"
+                    android:text="Capacity (GB)" />
+
+                <TextView
+                    android:id="@+id/capacityValueTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6"
+                    android:padding="10dp"
+                    android:text="TextView" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/thinProvisionedTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4"
+                    android:background="#f9fef8"
+                    android:padding="10dp"
+                    android:text="Thin provisioned" />
+
+                <TextView
+                    android:id="@+id/thinProvisionedValueTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6"
+                    android:padding="10dp"
+                    android:text="TextView" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_span="2">
+
+                <TextView
+                    android:id="@+id/modeTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4"
+                    android:background="#f9fef8"
+                    android:padding="10dp"
+                    android:text="Mode" />
+
+                <TextView
+                    android:id="@+id/modeValueTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6"
+                    android:padding="10dp"
+                    android:text="TextView" />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#fef3F9"
+                android:padding="5dp">
+                <TextView
+                    android:id="@+id/networkTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Network Adapter" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_span="2">
+
+                <TextView
+                    android:id="@+id/adapterTypeTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4"
+                    android:background="#f9fef8"
+                    android:padding="10dp"
+                    android:text="Adapter Type" />
+
+                <TextView
+                    android:id="@+id/adapterTypeValueTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6"
+                    android:padding="10dp"
+                    android:text="TextView" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/connectedTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4"
+                    android:background="#f9fef8"
+                    android:padding="10dp"
+                    android:text="Connected" />
+
+                <TextView
+                    android:id="@+id/connectedValueTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6"
+                    android:padding="10dp"
+                    android:text="TextView" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_span="2">
+
+                <TextView
+                    android:id="@+id/adressTypeTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4"
+                    android:background="#f9fef8"
+                    android:padding="10dp"
+                    android:text="Adress Type" />
+
+                <TextView
+                    android:id="@+id/adressTypeValueTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6"
+                    android:padding="10dp"
+                    android:text="TextView" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_span="2">
+
+                <TextView
+                    android:id="@+id/macAddressTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4"
+                    android:background="#f9fef8"
+                    android:padding="10dp"
+                    android:text="MAC adress" />
+
+                <TextView
+                    android:id="@+id/macAddressValueTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6"
+                    android:padding="10dp"
+                    android:text="TextView" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#fef3F9"
+                android:padding="5dp">
+                <TextView
+                    android:id="@+id/videoCardTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Video Card" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_span="2">
+
+                <TextView
+                    android:id="@+id/videoMemoryTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4"
+                    android:background="#f9fef8"
+                    android:padding="10dp"
+                    android:text="Total video memory" />
+
+                <TextView
+                    android:id="@+id/videoMemoryValueTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6"
+                    android:padding="10dp"
+                    android:text="TextView" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/nbrDisplaysTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4"
+                    android:background="#f9fef8"
+                    android:padding="10dp"
+                    android:text="Number of displays" />
+
+                <TextView
+                    android:id="@+id/nbrDisplaysValueTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6"
+                    android:padding="10dp"
+                    android:text="TextView" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_span="2">
+
+                <TextView
+                    android:id="@+id/rendererTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4"
+                    android:background="#f9fef8"
+                    android:padding="10dp"
+                    android:text="3D Renderer" />
+
+                <TextView
+                    android:id="@+id/rendererValueTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6"
+                    android:padding="10dp"
+                    android:text="" />
+            </TableRow>
+        </TableLayout>
+    </ScrollView>
+
+</RelativeLayout>
